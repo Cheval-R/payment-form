@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Payment Form</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./script.js"></script>
+</head>
+
+<body>
+	<section class="payment">
+		<div class="container">
+			<p class="secure">Secure Checkout</p>
+
+			<div class="card">
+				<p class="card__number">xxxx xxxx xxxx 4444</p>
+				<div class="card__footer">
+					<p class="card__name">Leskin Maksim</p>
+					<p class="card__date">04/24</p>
+				</div>
+			</div>
+
+			<div class="card-actions">
+				<p class="card-actions__add">Add new card</p>
+				<p class="card-actions__scan">Scan &amp; Add</p>
+			</div>
+
+			<form class="payment__form">
+				<div class="input-wrapper">
+					<label for="cardholder">Card Holder</label>
+					<input class="holder" type="text" name="cardholder" id="cardholder" placeholder="Leskin Maksim">
+				</div>
+				<div class="input-wrapper">
+					<label for="cardnumber">Card Number</label>
+					<input class="number" type="number" name="cardnumber" id="cardnumber" placeholder="xxxx xxxx xxxx 4444">
+				</div>
+
+				<div class="payment__form-footer">
+					<div class="input-wrapper input-wrapper--footer">
+						<label for="expiry">Card Expiry</label>
+						<input class="expiry" id="expiry" type="number" placeholder="04/24">
+					</div>
+
+					<div class="input-wrapper">
+						<label for="cvv">CVV</label>
+						<input class="cvv" id="cvv" type="number" placeholder="xxx">
+					</div>
+				</div>
+
+				<button class="payment__submit" type="submit">check out</button>
+			</form>
+
+		</div>
+	</section>
+</body>
+
+</html>

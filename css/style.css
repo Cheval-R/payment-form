@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('./normalize.css');
+
+p {
+	margin: unset;
+}
+
+body {
+	font-family: Inter;
+	color: rgb(82, 0, 106);
+	font-weight: 500;
+}
+
+.payment {
+	background: linear-gradient(226.55deg, rgba(82, 0, 106, 0.7) 39.149%, rgba(205, 17, 59, 0.7) 76.158%);
+	height: 100%;
+	padding: 196px 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 415px;
+	margin: 0 auto;
+	padding: 25px 25px 45px;
+	background: rgba(241, 241, 241, 0.83);
+}
+
+.secure::before {
+	content: "";
+	display: block;
+	height: 17px;
+	width: 16px;
+	background-image: url('./../img/secure.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.secure {
+	display: flex;
+	justify-content: flex-end;
+	gap: 7px;
+	align-items: center;
+
+	font-size: 14px;
+	line-height: 1.2;
+	align-self: flex-end;
+
+	margin-bottom: 36px;
+}
+
+.card::before,
+.card::after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 67px;
+	height: 28px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card::before {
+	top: 8px;
+	left: 23px;
+	background-image: url('./../img/visa.png');
+}
+
+.card:after {
+	top: 8px;
+	right: 25px;
+	background-image: url('./../img/mc.png');
+}
+
+.card {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 46px;
+
+	padding: 30px 45px;
+	margin-bottom: 12px;
+
+	position: relative;
+	width: 365px;
+	height: 190px;
+	border-radius: 32px;
+	background: linear-gradient(233.71deg, rgba(200, 147, 216, 0.53) 26.636%, rgb(239, 163, 182) 70.296%);
+}
+
+.card__number {
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 1.2;
+	letter-spacing: 3px;
+	align-self: center;
+}
+
+.card__footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card__name,
+.card__date {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.card-actions {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 45px;
+}
+
+.card-actions__add::before,
+.card-actions__scan::before {
+	content: "";
+	display: block;
+	width: 29px;
+	height: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card-actions__add::before {
+	background-image: url('./../img/add-card.svg');
+}
+
+.card-actions__scan::before {
+	background-image: url('./../img/scan.svg');
+}
+
+
+.card-actions__add,
+.card-actions__scan {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: center;
+
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.payment__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.payment__form input {
+	text-align: center;
+	color: rgb(82, 0, 106);
+	font-family: Inter;
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 23px;
+
+	border-radius: 10px;
+
+	box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.25);
+	background: rgb(242, 236, 236);
+	border: none;
+}
+
+.payment__form label {
+	content: "Card Holder";
+	color: rgb(205, 17, 59);
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.payment__form input::placeholder {
+	color: rgb(82, 0, 106);
+}
+
+.payment__form-footer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	margin-bottom: 50px;
+}
+
+.holder,
+.number {
+	width: 355px;
+	height: 60px;
+}
+
+.holder {
+	margin-bottom: 45px;
+}
+
+.number {
+	margin-bottom: 50px
+}
+
+.expiry,
+.cvv {
+	width: 108px;
+	height: 60px;
+}
+
+.payment__submit {
+	border-radius: 10px;
+	padding: 20px 92px;
+	border: none;
+	text-transform: uppercase;
+
+
+	color: rgb(82, 0, 106);
+	font-size: 18px;
+	font-weight: 400;
+
+	background: rgb(255, 169, 0);
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-wrapper--footer {
+	align-items: center;
+}
