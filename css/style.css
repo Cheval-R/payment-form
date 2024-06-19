@@ -51,8 +51,8 @@ body {
 	margin-bottom: 36px;
 }
 
-.card::before,
-.card::after {
+.card-display::before,
+.card-display::after {
 	position: absolute;
 	content: "";
 	display: block;
@@ -63,19 +63,19 @@ body {
 	background-size: cover;
 }
 
-.card::before {
+.card-display::before {
 	top: 8px;
 	left: 23px;
 	background-image: url('./../img/visa.png');
 }
 
-.card:after {
+.card-display:after {
 	top: 8px;
 	right: 25px;
 	background-image: url('./../img/mc.png');
 }
 
-.card {
+.card-display {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -90,9 +90,12 @@ body {
 	height: 190px;
 	border-radius: 32px;
 	background: linear-gradient(233.71deg, rgba(200, 147, 216, 0.53) 26.636%, rgb(239, 163, 182) 70.296%);
+	/* background: linear-gradient(233deg, rgba(178, 216, 147, 1) 26%, rgba(163, 239, 179, 1) 70%); */
 }
 
-.card__number {
+.card-display__number {
+	position: absolute;
+	top: 77px;
 	font-size: 19px;
 	font-weight: 400;
 	line-height: 1.2;
@@ -100,16 +103,25 @@ body {
 	align-self: center;
 }
 
-.card__footer {
+.card-display__footer {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-end;
 }
 
-.card__name,
-.card__date {
+.card-display__name,
+.card-display__date {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 1.2;
+	max-width: 50%;
+	max-height: 150px;
+	overflow: hidden;
+	overflow-wrap: break-word;
+
 }
 
 .card-actions {
@@ -149,6 +161,10 @@ body {
 	font-size: 15px;
 	font-weight: 500;
 	line-height: 1.2;
+
+	color: rgb(82, 0, 106);
+	border: unset;
+	background-color: unset;
 }
 
 .payment__form {
@@ -187,8 +203,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-
-	margin-bottom: 50px;
 }
 
 .holder,
@@ -197,13 +211,9 @@ body {
 	height: 60px;
 }
 
-.holder {
-	margin-bottom: 45px;
-}
+.holder {}
 
-.number {
-	margin-bottom: 50px
-}
+.number {}
 
 .expiry,
 .cvv {
@@ -228,8 +238,10 @@ body {
 .input-wrapper {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 50px;
 }
 
-.input-wrapper--footer {
+.payment__form-footer .input-wrapper {
 	align-items: center;
+	text-align: center;
 }

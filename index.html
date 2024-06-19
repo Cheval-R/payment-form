@@ -6,7 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Payment Form</title>
 	<link rel="stylesheet" href="./css/style.css">
-	<script src="./script.js"></script>
+	<script defer src="./js/axios.min.js"></script>
+	<script defer src="./js/just-validate-plugin-date.production.min.js"></script>
+	<script defer src="./js/inputmask.js"></script>
+	<script defer src="./js/just-validate.production.min.js"></script>
+	<script defer src="./js/script.js"></script>
 </head>
 
 <body>
@@ -14,38 +18,38 @@
 		<div class="container">
 			<p class="secure">Secure Checkout</p>
 
-			<div class="card">
-				<p class="card__number">xxxx xxxx xxxx 4444</p>
-				<div class="card__footer">
-					<p class="card__name">Leskin Maksim</p>
-					<p class="card__date">04/24</p>
+			<div class="card-display">
+				<p class="card-display__number">**** **** **** ****</p>
+				<div class="card-display__footer">
+					<p class="card-display__name">Name Surname</p>
+					<p class="card-display__date">mm/yy</p>
 				</div>
 			</div>
 
 			<div class="card-actions">
-				<p class="card-actions__add">Add new card</p>
-				<p class="card-actions__scan">Scan &amp; Add</p>
+				<button class="card-actions__add">Add new card</button>
+				<button class="card-actions__scan">Scan &amp; Add</button>
 			</div>
 
-			<form class="payment__form">
+			<form class="payment__form" id="form">
 				<div class="input-wrapper">
 					<label for="cardholder">Card Holder</label>
-					<input class="holder" type="text" name="cardholder" id="cardholder" placeholder="Leskin Maksim">
+					<input class="holder" type="text" name="cardholder" id="cardholder">
 				</div>
 				<div class="input-wrapper">
 					<label for="cardnumber">Card Number</label>
-					<input class="number" type="number" name="cardnumber" id="cardnumber" placeholder="xxxx xxxx xxxx 4444">
+					<input class="number" name="cardnumber" id="cardnumber">
 				</div>
 
 				<div class="payment__form-footer">
 					<div class="input-wrapper input-wrapper--footer">
 						<label for="expiry">Card Expiry</label>
-						<input class="expiry" id="expiry" type="number" placeholder="04/24">
+						<input name="expiry" class="expiry" id="expiry">
 					</div>
 
 					<div class="input-wrapper">
 						<label for="cvv">CVV</label>
-						<input class="cvv" id="cvv" type="number" placeholder="xxx">
+						<input name="cvv" class="cvv" id="cvv">
 					</div>
 				</div>
 
